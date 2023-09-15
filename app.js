@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT ?? 3000;
 
 app.use(cors());
-app.use(json());
+app.use(express.json());
 
 app.get("/api", (_req, res) => {
     res.send("I demand your request. Now!");
